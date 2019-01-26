@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline:none !important;
+}
+
+body {
+    background: linear-gradient(45deg,rgba(130, 240, 124, .2),rgba(240, 240, 250, .8));
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 1rem 0 0 0;
+}
+
+input[type=checkbox]{
+  /* Double-sized Checkboxes */
+  cursor: pointer;
+  margin: 0 3rem 0 0;
+  -ms-transform: scale(2.5); /* IE */
+  -moz-transform: scale(2.5); /* FF */
+  -webkit-transform: scale(2.5); /* Safari and Chrome */
+  -o-transform: scale(2.5); /* Opera */
+}
+
+header.mdl-layout__header {
+    background: linear-gradient(45deg,rgba(240, 240, 250, .8),rgba(130, 240, 124, .2));
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#addToDoForm {
+    background-color: rgb(135, 135, 135);
+    padding: .5rem;
+    text-align: center;
+}
+
+#addToDoForm label {
+    color: white;
+    margin-right: .5rem;
+}
+
+#toDoList {
+    margin: 0 auto;
+    max-width: 70vw;
+    padding-left: 0;
+}
+
+#toDoList li {
+    background-color: rgba(245, 245, 245, .5);
+    border-bottom: 1px solid rgb(179, 179, 179);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    list-style-type: none;
+    margin: .5rem;
+    padding: 1rem;
+}
+
+#newToDoText {
+    /* Responsive text input field */
+    height: 30px;
+    max-width: 40vw;
+    width: 100%;
+}
+
+.mdl-button {
+    background-color:rgba(130, 240, 124, .8);
+    margin-left: 1rem;
+}
+
+.mdl-button:hover {
+    background-color: rgb(16, 117, 60);
+}
+
+.mdl-button--fab {
+    height: 40px;
+    min-width: 40px;
+    width: 40px;
+}
+
+.deleteBtn {
+    background-color: rgb(187, 28, 66);
+    box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.24);
+    border-radius: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 900;
+    height: 40px;
+    margin-right: 1rem;
+    width: 40px;
+}
+
+.deleteBtn:hover {
+    background-color: rgb(107, 0, 0);
+}
+
+.deleteBtn:active{
+    background-color: rgb(107, 0, 0);
+}
+
+@media screen and (max-width: 800px ) {
+    #toDoList {
+        max-width: 100%;
+    }
+}
