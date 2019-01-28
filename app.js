@@ -13,7 +13,19 @@ function onReady() {
             const CHECKBOX = document.createElement('input');
             CHECKBOX.type = "checkbox";
 
+            const DELETE_BTN = document.createElement('button');
+            DELETE_BTN.textContent = "–";
+            DELETE_BTN.classList.add('deleteBtn');
+
+            DELETE_BTN.addEventListener('click', event => {
+                toDos = toDos.filter(function(item) {
+                    return item.id !== toDo.id;
+                })
+                renderTheUI();
+            });
+
             NEW_LI.textContent = toDo.title;
+            NEW_LI.prepend(DELETE_BTN);
             NEW_LI.prepend(CHECKBOX);
 
             TODO_LIST.appendChild(NEW_LI);
@@ -33,7 +45,6 @@ function onReady() {
 
         id++
 
-        console.log(toDos);
         newToDoText.value = '';
         renderTheUI();
     }
